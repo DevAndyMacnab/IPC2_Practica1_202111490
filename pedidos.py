@@ -8,6 +8,8 @@ class Pedidos():
         self.ingredientes= ingredientes
         self.siguiente= None
         self.anterior=None
+        self.tiempo=0
+        self.despacho=0
          
         
         

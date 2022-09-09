@@ -10,6 +10,7 @@ print("PARA DESPACHAR UN PEDIDO, ESCRIBA: despacho")
 print("PARA VER COMO VA LA COLA, ESCRIBA: ver")
 print("PARA VER LOS DATOS DEL DESARROLLADOR, ESCRIBA, dev")
 ingredientesLista=[]
+pedidos=ColaEnlazada()
 while salida==False:
     opcion=input("elija una opcion...")
     
@@ -22,7 +23,7 @@ while salida==False:
         print("CARNET: 202111490")
     
     if opcion =='pedido':
-        pedidos=ColaEnlazada()
+        
         print("-----------------------------")
         name=input("ingrese su nombre...")
         amount=input("ingrese la cantidad...")
@@ -39,8 +40,11 @@ while salida==False:
         
     if opcion =='despacho':
         print("-----------------------------")
-        pedidos.eliminarInicio()
-        pedidos.recorrerFinInicio()
+        pedidos.eliminarFinal()
+        pedidos.recorrerInicioFin()
+        
+    if opcion=='ver':
+        pedidos.crearReporte()
         
         
         
